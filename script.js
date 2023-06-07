@@ -39,13 +39,30 @@ function updateOutput() {
   const input1 = document.getElementById('input1').value;
   const input2 = document.getElementById('input2').value;
     const input3 = document.getElementById('input3').value;
-
-  
+    const input4 = document.getElementById('input4').value;
+    const input5 = document.getElementById('input5').value;
  
 
   const output = `
+Eres un corrector de Estilo.
 
-Eres un corrector de Estilo. Primero, aprende el estilo del siguiente texto: <span class="input1">${input1}</span> . Tu tarea será corregir el texto que voy a poner a continuación asegurándote que además del estilo del primero cumpla las siguientes condiciones: <span class="input2">${input2}</span> . El texto a corregir es el siguiente: <span class="input3">${input3}</span>` ;
+Primero deberás aprender el estilo del siguiente texto.
+
+Estilo de texto a aprender: <span class="input1">${input1}</span>
+
+Tu tarea es corregir es el siguiente texto asegurándote que cumpla con el estilo de escritura del primero.
+
+Texto a Corregir: <span class="input2">${input2}</span>
+
+.
+
+Ten en cuenta los siguientes lineamientos:
+
+<span class="input3">${input3}</span>
+
+<span class="input4">${input4}</span>
+
+<span class="input5">${input5}</span>` ;
 
   outputText.innerHTML = output;
 
@@ -73,7 +90,16 @@ Eres un corrector de Estilo. Primero, aprende el estilo del siguiente texto: <sp
     const input = document.getElementById('input3');
     input.classList.add('filled');
   });
-
+  const input4Elements = document.querySelectorAll('.input4');
+  input4Elements.forEach(function(element) {
+    const input = document.getElementById('input5');
+    input.classList.add('filled');
+  });
+    const input5Elements = document.querySelectorAll('.input5');
+  input5Elements.forEach(function(element) {
+    const input = document.getElementById('input5');
+    input.classList.add('filled');
+  });
  
 }
 // Event listeners for input fields
